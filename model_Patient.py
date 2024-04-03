@@ -1,5 +1,4 @@
 from pydantic import BaseModel, validator
-
 class Patient(BaseModel):
     nom: str
     prenom: str
