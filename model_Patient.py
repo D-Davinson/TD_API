@@ -20,8 +20,8 @@ class Patient(BaseModel):
         department = int(ssn[5:7])
         if department < 1 or department > 99:
             raise ValueError('Le département de naissance dans le numéro de sécurité sociale est invalide.')
-        country_id = int(ssn[7:10])
-        if country_id < 1 or country_id > 999:
+        pays_id = int(ssn[7:10])
+        if pays_id < 1 or pays_id > 999:
             raise ValueError('L\'identifiant du pays de naissance dans le numéro de sécurité sociale est invalide.')
         anniversaire_index = int(ssn[10:13])
         if anniversaire_index < 1 or anniversaire_index > 999:
